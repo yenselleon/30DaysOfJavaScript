@@ -7,18 +7,22 @@ let sound = {
   'h': './src/audio/TOM1.wav.mp3',
   'j': './src/audio/TOM5.wav.mp3',
 
-} 
+}
+const keys = document.querySelectorAll('.key');
 
 window.addEventListener('keydown', (e) => {
-    let key
-    
-    if (e.key !== undefined) {
-        key = e.key;
-      } else if (e.keyIdentifier !== undefined) {
-        key = e.keyIdentifier;
-      } else if (e.keyCode !== undefined) {
-        key = e.keyCode;
-      }
+    let key = e.key
+    new Audio(sound[key]).play();
 
-      new Audio(sound[key]).play();
+    [...keys].map(e => {
+
+      (key == e.dataset.key) && e.classList.add('playing')
+
+      setTimeout(() => {
+        (key == e.dataset.key) && e.classList.remove('playing')
+      }, 100);
+
+      return e.dataset
+    });
+    
 })

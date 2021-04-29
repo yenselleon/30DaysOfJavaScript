@@ -25,6 +25,9 @@ span{
 
 .center{
     width: 50%;
+    border: 3px solid blanchedalmond;
+    padding: 25px 15px;
+    border-radius: 10px;
 }
 
 .keys{
@@ -42,12 +45,14 @@ span{
     flex-direction: column;
     padding: 10px 15px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-.key:hover{
-    background-color: rgb(252, 198, 128);
+.playing{
+    background-color: rgb(252, 198, 128)
 }
 
-.key:hover > h1, .key:hover > span{
+
+.key.playing > h1, .key.playing > span{
     color: black;
 } 
