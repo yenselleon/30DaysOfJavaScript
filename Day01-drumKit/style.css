@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: rgb(252, 198, 128);
+    font-weight: bold;
+}
+
+span{
+    color: rgba(222, 184, 135, 0.719);
+    font-weight: bold;
+}
+
+.hero{
+    width: 100%;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+    width: 50%;
+}
+
+.keys{
+    display: flex;
+    width: 100%;
+    height: auto    ;
+    justify-content: space-around;
+}
+
+.key{
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.key:hover{
+    background-color: rgb(252, 198, 128);
+}
+
+.key:hover > h1, .key:hover > span{
+    color: black;
+} 
